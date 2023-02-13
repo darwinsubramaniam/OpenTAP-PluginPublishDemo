@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+InfoLink: Specifies a location where additional information about the package can be found.
+Version: The version of the package. Must be in a semver 2.0 compatible format. This can be automatically updated from GIT.
+
+For Version the following macro is available (Only works if the project directory is under Git source control):
+$(GitVersion) - Gets the version from Git in the recommended format Major.Minor.Build-PreRelease+CommitHash.BranchName.
+-->
+<Package Name="OpenTAP-PluginPublishDemo" Version="1.0.0" OS="Windows,Linux" Architecture="AnyCPU" xmlns="http://opentap.io/schemas/package">
+  <Description>OpenTAP Open Source Plugin Publish Demo Plugin.</Description>
+	<Owner>Darwin Subramaniam</Owner>
+	<SourceUrl></SourceUrl>
+	<SourceLicense>MIT</SourceLicense>
+  <Files>
+    <File Path="Packages/OpenTAP-PluginPublishDemo/OpenTAP_PluginPublishDemo.dll" SourcePath="OpenTAP_PluginPublishDemo.dll">
+      <SetAssemblyInfo Attributes="Version"/>
+      <!--ObfuscateWithDotfuscator/-->
+    </File>
+  </Files>
+</Package>
